@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum — AIBridge</title>
+<meta name="description" content="The full AIBridge curriculum: a five-day course of nine lectures and eight hands-on labs covering Python, machine learning, and generative AI.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="AIBridge home">
+      <img src="assets/img/logo.svg" alt="" width="46" height="46">
+      <span class="brand__word">AI<span>Bridge</span></span>
+    </a>
+    <div class="nav__links">
+      <a href="team.html">Our Team</a>
+      <a href="curriculum.html">Curriculum</a>
+      <a href="events.html">Events</a>
+    </div>
+    <div class="nav__social">
+      <a href="mailto:aibridgecamp@gmail.com" aria-label="Email AIBridge">
+        <svg viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4C504.9 141.3 512 127.1 512 112c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/aibridge-m/" target="_blank" rel="noopener" aria-label="AIBridge on LinkedIn">
+        <svg viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+      </a>
+    </div>
+    <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</nav>
+
+<header class="pagehead">
+  <div class="wrap">
+    <span class="eyebrow">Curriculum</span>
+    <h1>Curriculum</h1>
+    <p>
+      The five-day course: nine lectures and eight labs, from a first line of Python to the
+      models behind ChatGPT. Every slide deck, notebook, task sheet, and solution key is
+      linked below — free to use whether or not you ever attend a camp.
+    </p>
+  </div>
+</header>
+
+<main>
+<section class="section section--tight">
+  <div class="wrap">
+
+    <p class="banner" id="release-banner" hidden></p>
+
+    <div class="table-scroll">
+      <table class="syllabus">
+        <caption class="sr-only">Five-day AIBridge course schedule: lectures and their paired labs</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Lecture</th>
+            <th scope="col">Lab</th>
+          </tr>
+        </thead>
+        <tbody id="syllabus-body"></tbody>
+      </table>
+    </div>
+
+    <noscript>
+      <div class="notice" style="margin-top:32px">
+        <b>JavaScript is off.</b> The schedule table needs it. The raw materials are still
+        browsable in the <code>lectures/</code> and <code>labs/</code> folders of this site.
+      </div>
+    </noscript>
+
+    <div class="notice">
+      <b>How the labs work.</b> Each lab ships at two levels — <em>Level 1</em> is scaffolded
+      with guidance, <em>Level 2</em> gives you the task and nothing else — plus a demo the
+      instructor walks through live and a solution key you keep. Notebooks download as
+      <code>.ipynb</code>; upload one to <a href="https://colab.research.google.com" target="_blank" rel="noopener">Google&nbsp;Colab</a>
+      and everything runs in the browser with nothing to install.
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="" width="46" height="46">
+          <span class="brand__word">AI<span>Bridge</span></span>
+        </a>
+        <p>Bridging the gap between AI and the fields that need it — one free camp at a time.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:aibridgecamp@gmail.com">aibridgecamp@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/company/aibridge-m/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> AIBridge M. All rights reserved.</span>
+      <span>Made by volunteers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/curriculum.js"></script>
+</body>
+</html>

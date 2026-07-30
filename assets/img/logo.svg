@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="AIBridge logo">
+  <defs>
+    <linearGradient id="ab-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#7d8cff"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="56" fill="none" stroke="url(#ab-g)" stroke-width="2" opacity="0.45"/>
+
+  <!-- deck -->
+  <path d="M16 76 H104" stroke="url(#ab-g)" stroke-width="4" stroke-linecap="round"/>
+  <!-- span -->
+  <path d="M16 76 Q60 24 104 76" fill="none" stroke="url(#ab-g)" stroke-width="3.4" stroke-linecap="round"/>
+  <!-- cables -->
+  <g stroke="url(#ab-g)" stroke-width="1.8" opacity="0.72" stroke-linecap="round">
+    <path d="M31 62 V76"/>
+    <path d="M45.5 51 V76"/>
+    <path d="M60 46 V76"/>
+    <path d="M74.5 51 V76"/>
+    <path d="M89 62 V76"/>
+  </g>
+  <!-- towers / nodes -->
+  <g fill="url(#ab-g)">
+    <circle cx="16" cy="76" r="5"/>
+    <circle cx="104" cy="76" r="5"/>
+    <circle cx="60" cy="46" r="6"/>
+    <circle cx="45.5" cy="51" r="3.2"/>
+    <circle cx="74.5" cy="51" r="3.2"/>
+  </g>
+  <!-- piers -->
+  <g stroke="url(#ab-g)" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M16 76 V92"/>
+    <path d="M104 76 V92"/>
+  </g>
+</svg>
