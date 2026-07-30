@@ -724,6 +724,20 @@ p:last-child { margin-bottom: 0; }
   color: var(--muted);
 }
 
+/* Notebook links that jump out to Google Colab. */
+.res__link--colab {
+  border-color: rgba(246, 173, 60, 0.34);
+  background: rgba(246, 173, 60, 0.08);
+  color: #f3d5a6;
+}
+.res__link--colab:hover {
+  color: #fff;
+  border-color: rgba(246, 173, 60, 0.66);
+  background: rgba(246, 173, 60, 0.16);
+}
+.res__link--colab small { color: rgba(243, 213, 166, 0.7); }
+.res__ext { width: 11px !important; height: 11px !important; opacity: 0.75; margin-left: -1px; }
+
 .res__link--locked {
   cursor: default;
   border-style: dashed;

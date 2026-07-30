@@ -62,43 +62,103 @@ Everything lives in `assets/js/curriculum.js`:
   one-line edit.
 
 Paths are written exactly as the files sit on disk (spaces and emoji included) and are
-URL-encoded at render time. Lab notebooks are stored without a file extension, so links
-carry a `download` name ending in `.ipynb` — they save correctly and open straight in
-Colab.
+URL-encoded at render time — so renaming a material file means editing one string here.
+
+## Opening notebooks in Colab
+
+Colab can only open a notebook it can fetch itself — from GitHub, Google Drive, or a
+gist. A file sitting on this site's own host is not reachable that way, so a notebook
+link becomes an "open in Colab" jump only once you tell it where the notebook lives.
+Anything unconfigured still downloads as `.ipynb`, exactly as before.
+
+**Route A — the whole folder from GitHub. This is what's configured.**
+
+```js
+const COLAB_GITHUB = { owner: "AIFS-AI-Bridge", repo: "aifs-ai-bridge.github.io", branch: "main" };
+```
+
+All 27 notebooks link into Colab from their path in that repo, with no per-file work.
+The notebooks have already been renamed to end in `.ipynb` (Colab's GitHub loader
+requires it) by:
+
+```sh
+python3 tools/rename-notebooks.py          # preview
+python3 tools/rename-notebooks.py --apply  # rename, and update curriculum.js paths
+```
+
+That script is safe to re-run and reports "nothing to do" once every notebook is named
+correctly — run it again after adding new notebooks. **The repo must be public**, or
+students hit a GitHub authorization wall before Colab will open anything.
+
+**Route B — per notebook, from Drive.** Best if the notebooks already live in Drive.
+Add a `colab:` field to any resource; it wins over the GitHub setting for that file:
+
+```js
+{ kind: "notebook", label: "Level 1", path: "labs/LAB 1/Lab 1 Level 1.ipynb",
+  colab: "1MlETo1cyM8XHTitEVvwnhBTY2q6Df4jk" }
+```
+
+A bare Drive file id, a Drive share link (`https://drive.google.com/file/d/…/view`), or
+a full `colab.research.google.com/…` URL all work — the id is pulled out for you. Set
+the Drive files to "anyone with the link can view" or students will hit a permission
+wall.
+
+The two routes mix freely: `COLAB_GITHUB` covers the bulk, and a `colab:` field
+overrides any individual notebook where a Drive copy is the one you want.
+
+Colab links render in amber with an external-link arrow and open in a new tab; `.docx`
+and `.pptx` links are unaffected. Release gating applies to Colab links exactly as it
+does to downloads — a locked notebook shows the unlock time instead of the link.
 
 ## Releasing material during a bootcamp
 
-By default nothing is gated — every link is live. To drip-feed a cohort, set the first
-session in the `RELEASE` block at the top of `assets/js/curriculum.js`:
+Material unlocks on a schedule set by the `RELEASE` block at the top of
+`assets/js/curriculum.js`. Currently configured for the **August 2026 cohort**:
 
 ```js
 const RELEASE = {
-  start: "2026-08-03T09:00",   // local time of day 1; null = nothing gated
-  offsets: [0, 1, 2, 3, 4],    // days after start that each course day opens
-  keyDelayHours: 8             // keys trail their day by this much; null = same time
+  start: "2026-08-03",           // date of day 1; null = nothing gated
+  offsets: [0, 1, 2, 3, 4],      // days after start that each course day runs
+  slotTimes: ["08:00", "12:00"], // when the 1st and 2nd lecture+lab of a day open
+  keyDelayHours: 3               // a key trails its own lab by this much
 };
 ```
 
-That is the only edit per cohort. Behaviour:
+Which produces:
 
-- Days that haven't opened stay visible in the table — greyed, with an
-  "Unlocks Tue, Aug 4, 9:00 AM" chip in place of the download links — so students can see
-  what's coming without being able to run ahead.
-- Solution keys release `keyDelayHours` after the rest of their day, so nobody has the
-  answers while working the task.
-- Days stay open once released; nothing expires mid-course.
-- A banner above the table announces what unlocks next.
-- Instructors add `?preview` to the URL
-  (`…/curriculum.html?preview`) to see everything early. Share the plain link with students.
+| Session | Opens | Its key opens |
+| --- | --- | --- |
+| Day 1 · Lecture 1 + Lab 1 | Mon Aug 3, 8:00 AM | 11:00 AM |
+| Day 1 · Lecture 2 + Lab 2 | Mon Aug 3, 12:00 PM | 3:00 PM |
+| Day 2 · Lecture 3 + Lab 3 | Tue Aug 4, 8:00 AM | 11:00 AM |
+| Day 2 · Lecture 4 + Lab 4 | Tue Aug 4, 12:00 PM | 3:00 PM |
+| … | | |
+| Day 5 · Lecture 9 | Fri Aug 7, 8:00 AM | — |
 
-For a weekly series rather than consecutive days, change the offsets:
-`offsets: [0, 7, 14, 21, 28]`.
+Behaviour:
 
-After the camp, set `start: null` to reopen the whole archive.
+- The two halves of a day unlock independently — at 8:05 AM the morning lecture and lab
+  are open while the afternoon pair is still greyed out with an "Unlocks 12:00 PM" chip.
+- Each solution key trails **its own lab** by `keyDelayHours`, not the day, so a morning
+  key lands at 11:00 while the afternoon lab hasn't even opened.
+- Locked sessions stay visible in the table so students see what's coming.
+- Released material stays open for the rest of the course; nothing expires.
+- A banner above the table announces the next unlock.
+- Instructors add `?preview` to the URL (`…/curriculum.html?preview`) to see everything
+  early. Share the plain link with students.
+
+Times are the viewer's local clock. Everyone in the room is in the same timezone as the
+camp, so this is what you want; a student joining from another timezone sees the moment
+translated to theirs.
+
+To re-run for a new cohort, change `start`. For a weekly series rather than consecutive
+days: `offsets: [0, 7, 14, 21, 28]`. For a day with three sessions, add a third entry to
+`slotTimes`. After the camp, set `start: null` to reopen the whole archive.
 
 **What this does and doesn't do.** This hides links on a schedule; it is not access
 control. The site is static, so a locked file is still sitting at a guessable URL
-(`labs/LAB 5/KEY 5 -- ...`) for anyone who looks. That's usually fine for pacing. If a
+(`labs/LAB 5/KEY 5 -- ....ipynb`) for anyone who looks — and with the notebooks now on
+GitHub, the repo itself is browsable. That's usually fine for pacing. If a
 file genuinely must not be reachable early — solution keys are the realistic case — the
 only reliable fix on a static host is to not upload it yet: keep the keys out of the
 deployed folder and add them after the session, or put the whole site behind your host's

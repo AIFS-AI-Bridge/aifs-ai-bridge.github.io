@@ -6,8 +6,13 @@
  *
  * Resource kinds:
  *   slides   .pptx lecture deck
- *   notebook Colab notebook, stored on disk without an extension
+ *   notebook .ipynb Colab notebook
  *   doc      .docx script / task / assignment sheet
+ *
+ * Notebook links open straight in Google Colab wherever we know the notebook's
+ * home — see COLAB_GITHUB below and the per-resource `colab` field. Colab can
+ * only load notebooks it can fetch itself (GitHub, Drive, or a gist), so a
+ * notebook that exists only in this folder falls back to downloading.
  */
 
 const LECTURES = {
@@ -63,38 +68,38 @@ const LABS = {
     title: "Data Exploration",
     desc: "Load the iris and wine-quality datasets in Colab, then work out what you're actually holding: mean, median, min, and max of a feature, filtering rows by condition, and scaling values into the 0–1 range.",
     resources: [
-      { kind: "notebook", label: "Template for demo", path: "labs/LAB 1/AIBridge Lab 1 Template" },
+      { kind: "notebook", label: "Template for demo", path: "labs/LAB 1/AIBridge Lab 1 Template.ipynb" },
       { kind: "doc",      label: "Demo script",       path: "labs/LAB 1/Lab 1 Demo Script.docx" },
       { kind: "doc",      label: "Task",              path: "labs/LAB 1/Lab 1 Assignment.docx" },
-      { kind: "notebook", label: "Level 1",           note: "guided",       path: "labs/LAB 1/Lab 1 Level 1" },
-      { kind: "notebook", label: "Level 2",           note: "no scaffold",  path: "labs/LAB 1/Lab 1 Level 2" },
-      { kind: "notebook", label: "Solution key",      path: "labs/LAB 1/Lab 1 Key" }
+      { kind: "notebook", label: "Level 1",           note: "guided",       path: "labs/LAB 1/Lab 1 Level 1.ipynb" },
+      { kind: "notebook", label: "Level 2",           note: "no scaffold",  path: "labs/LAB 1/Lab 1 Level 2.ipynb" },
+      { kind: "notebook", label: "Solution key",      path: "labs/LAB 1/Lab 1 Key.ipynb" }
     ]
   },
   2: {
     title: "Python for ML",
     desc: "Pull the red wine dataset straight from the UCI repository, compute the standard deviation of every feature, rescale a column by its maximum, and plot two features against each other — colouring points by how far they sit from the mean.",
     resources: [
-      { kind: "notebook", label: "Demo notebook",  path: "labs/LAB 2/✅DEMO 2 - Python for ML" },
+      { kind: "notebook", label: "Demo notebook",  path: "labs/LAB 2/✅DEMO 2 - Python for ML.ipynb" },
       { kind: "doc",      label: "Demo script",    path: "labs/LAB 2/✅DEMO 2 - Python for ML.docx" },
-      { kind: "notebook", label: "Lecture demo",   path: "labs/LAB 2/Lecture 2 Demo🐰" },
-      { kind: "notebook", label: "Lab demo",       path: "labs/LAB 2/Lab 2 Demo🐰" },
+      { kind: "notebook", label: "Lecture demo",   path: "labs/LAB 2/Lecture 2 Demo🐰.ipynb" },
+      { kind: "notebook", label: "Lab demo",       path: "labs/LAB 2/Lab 2 Demo🐰.ipynb" },
       { kind: "doc",      label: "Task",           path: "labs/LAB 2/TASK 2 - Python for ML.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 2/LAB 2S - Python for ML" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 2/LAB 2B - Python for ML" },
-      { kind: "notebook", label: "Solution key",   path: "labs/LAB 2/KEY 2 - Python for ML" }
+      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 2/LAB 2S - Python for ML.ipynb" },
+      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 2/LAB 2B - Python for ML.ipynb" },
+      { kind: "notebook", label: "Solution key",   path: "labs/LAB 2/KEY 2 - Python for ML.ipynb" }
     ]
   },
   3: {
     title: "Intro to Supervised Learning",
     desc: "Two prediction problems on the same wine data: classify a sample as red or white from its chemistry, then predict its quality score — holding out the last 200 shuffled rows to test. Bonus round: polynomial regression and hunting for feature combinations that help.",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 3/Lab 3 Demo🤖" },
+      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 3/Lab 3 Demo🤖.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 3/✅DEMO 3 - Intro to Supervised.docx" },
       { kind: "doc",      label: "Task",          path: "labs/LAB 3/Lab 3 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 3/Lab 3 Level 1" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 3/Lab 3 Level 2" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 3/Lab 3 Key" }
+      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 3/Lab 3 Level 1.ipynb" },
+      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 3/Lab 3 Level 2.ipynb" },
+      { kind: "notebook", label: "Solution key",  path: "labs/LAB 3/Lab 3 Key.ipynb" }
     ]
   },
   4: {
@@ -103,43 +108,43 @@ const LABS = {
     resources: [
       { kind: "doc",      label: "Demo script",  path: "labs/LAB 4/Lab 4 Demo Script.docx" },
       { kind: "doc",      label: "Task",         path: "labs/LAB 4/Lab 4 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 4/Lab 4 Level 1" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 4/Lab 4 Level 2" },
-      { kind: "notebook", label: "Solution key", path: "labs/LAB 4/Lab 4 Key" }
+      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 4/Lab 4 Level 1.ipynb" },
+      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 4/Lab 4 Level 2.ipynb" },
+      { kind: "notebook", label: "Solution key", path: "labs/LAB 4/Lab 4 Key.ipynb" }
     ]
   },
   5: {
     title: "Overfitting and Feature Selection",
     desc: "Fit a logistic regression to a modified iris dataset — train on the first 100 samples, test on the last 50 — then run feature selection with SelectKBest or VarianceThreshold, refit on the trimmed features, and see what fewer inputs buy you.",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 5/Lab 5 Demo 🦾" },
+      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 5/Lab 5 Demo 🦾.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 5/DEMO 5 -- Overfitting and Feature Selection.docx" },
       { kind: "doc",      label: "Task",          path: "labs/LAB 5/TASK 5 -- Overfitting and Feature Selection.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 5/LAB 5S -- Overfitting and Feature Selection" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 5/LAB 5B -- Overfitting and Feature Selection" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 5/KEY 5 -- Overfitting and Feature Selection" }
+      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 5/LAB 5S -- Overfitting and Feature Selection.ipynb" },
+      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 5/LAB 5B -- Overfitting and Feature Selection.ipynb" },
+      { kind: "notebook", label: "Solution key",  path: "labs/LAB 5/KEY 5 -- Overfitting and Feature Selection.ipynb" }
     ]
   },
   6: {
     title: "Diagnosing Bad Data",
     desc: "A model can be sound and still be wrong, because the data underneath it is broken. Each dataset in this lab has something deliberately wrong with it — find the fault, decide whether it can be fixed, and fix the ones that can.",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 6/Lab 6 Demo" },
+      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 6/Lab 6 Demo.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 6/Lab 6 Demo Script.docx" },
       { kind: "doc",      label: "Task",          path: "labs/LAB 6/Lab 6 Assignment.docx" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 6/Lab 6 Key" }
+      { kind: "notebook", label: "Solution key",  path: "labs/LAB 6/Lab 6 Key.ipynb" }
     ]
   },
   7: {
     title: "Clustering and PCA",
     desc: "Run k-means on the wine data and see how closely the clusters it invents match the real classes — then sweep k to find out how much that answer depends on your guess. Follow with PCA: drop dimensions, watch accuracy respond, and plot the whole dataset in 2D.",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 7/Lab 7 Demo" },
+      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 7/Lab 7 Demo.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 7/Lab 7 Demo Script.docx" },
       { kind: "doc",      label: "Task",          path: "labs/LAB 7/Lab 7 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 7/Lab 7 level 1" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 7/Lab 7 Level 2" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 7/Lab 7 Key" }
+      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 7/Lab 7 level 1.ipynb" },
+      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 7/Lab 7 Level 2.ipynb" },
+      { kind: "notebook", label: "Solution key",  path: "labs/LAB 7/Lab 7 Key.ipynb" }
     ]
   },
   8: {
@@ -167,40 +172,91 @@ const SCHEDULE = [
  * Materials stay locked until their day begins. Set `start` to the first
  * session of the cohort and everything else follows from it.
  *
- *   start:   local date-time of day 1, e.g. "2026-08-03T09:00".
+ *   start:   local date of day 1, e.g. "2026-08-03".
  *            null  → nothing is gated (the public archive / self-paced mode).
- *   offsets: days after `start` that each course day unlocks.
+ *   offsets: days after `start` that each course day runs.
  *            [0,1,2,3,4]      consecutive days (a week-long camp)
  *            [0,7,14,21,28]   one session a week (a library series)
- *   keyDelayHours: how long after a day opens its solution keys unlock, so
+ *   slotTimes: when each lecture+lab pair of a day opens. The first pair uses
+ *            slotTimes[0], the second slotTimes[1], and so on; a day with more
+ *            pairs than times listed reuses the last one.
+ *   keyDelayHours: how long after its own lab a solution key unlocks, so
  *            students get the task before the answers. null → same time.
  *
  * Instructors can add ?preview to the URL to see everything early.
  */
 const RELEASE = {
-  start: null,
+  start: "2026-08-03",
   offsets: [0, 1, 2, 3, 4],
-  keyDelayHours: 8
+  slotTimes: ["08:00", "12:00"],
+  keyDelayHours: 3
 };
+
+/* --------------------------------------------------------------- colab ---
+ *
+ * Two ways to make a notebook open in Colab; either is enough.
+ *
+ * 1. Whole folder at once. If this site is pushed to GitHub, fill this in and
+ *    every notebook below links into Colab from its path — no per-file edits.
+ *    Colab's GitHub loader needs filenames ending in .ipynb, so run
+ *    `python3 tools/rename-notebooks.py --apply` first (see the README).
+ *
+ *      const COLAB_GITHUB = { owner: "aibridgecamp", repo: "aibridge-site", branch: "main" };
+ *
+ * 2. Per notebook. Add `colab:` to any resource — a Colab link, a Drive share
+ *    link, or a bare Drive file id. Useful if the notebooks already live in
+ *    Drive. It overrides the GitHub setting for that one file:
+ *
+ *      { kind: "notebook", label: "Level 1", path: "…", colab: "1AbC…xyz" }
+ */
+const COLAB_GITHUB = { owner: "AIFS-AI-Bridge", repo: "aifs-ai-bridge.github.io", branch: "main" };
+
+/* The Colab URL for a notebook, or null when we don't know where it lives. */
+function colabUrl(res) {
+  if (res.kind !== "notebook") return null;
+
+  if (res.colab) {
+    if (/colab\.research\.google\.com/.test(res.colab)) return res.colab;
+    // Drive share links and bare ids both reduce to the file id.
+    const id = res.colab.match(/[-\w]{25,}/);
+    return id ? "https://colab.research.google.com/drive/" + id[0] : res.colab;
+  }
+
+  if (COLAB_GITHUB && COLAB_GITHUB.owner && COLAB_GITHUB.repo) {
+    return "https://colab.research.google.com/github/" +
+           COLAB_GITHUB.owner + "/" + COLAB_GITHUB.repo + "/blob/" +
+           (COLAB_GITHUB.branch || "main") + "/" + encodeURI(res.path);
+  }
+
+  return null;
+}
 
 const PREVIEW = /[?&]preview\b/.test(location.search);
 
-const DAY_MS = 86400000;
-
-/* When day N unlocks — null if release gating is switched off entirely. */
-function unlocksAt(dayIndex) {
+/* When a given slot opens — row 0 of a day at slotTimes[0], row 1 at
+   slotTimes[1], and so on. Null when release gating is switched off. */
+function unlocksAt(dayIndex, slotIndex) {
   if (!RELEASE.start) return null;
-  const start = new Date(RELEASE.start);
-  if (isNaN(start)) return null;
+
+  const times = RELEASE.slotTimes && RELEASE.slotTimes.length
+    ? RELEASE.slotTimes
+    : ["00:00"];
+  const time = times[Math.min(slotIndex, times.length - 1)];
+
+  // Accept "2026-08-03" or "2026-08-03T08:00" for start; the date is what counts.
+  const at = new Date(String(RELEASE.start).slice(0, 10) + "T" + time);
+  if (isNaN(at)) return null;
+
   const offset = RELEASE.offsets[dayIndex] != null ? RELEASE.offsets[dayIndex] : dayIndex;
-  return new Date(start.getTime() + offset * DAY_MS);
+  at.setDate(at.getDate() + offset);   // keeps wall-clock time across DST
+  return at;
 }
 
 function isUnlocked(when) {
   return PREVIEW || when === null || Date.now() >= when.getTime();
 }
 
-/* Solution keys trail the rest of their day by keyDelayHours. */
+/* A solution key trails its own lab, not the day, by keyDelayHours. */
 function keyUnlocksAt(when) {
   if (when === null || !RELEASE.keyDelayHours) return when;
   return new Date(when.getTime() + RELEASE.keyDelayHours * 3600000);
@@ -210,11 +266,42 @@ function isKey(res) {
   return /key/i.test(res.label);
 }
 
+/* Every lecture+lab slot in order, with the moment it opens. */
+function allSlots() {
+  const out = [];
+  SCHEDULE.forEach(function (entry, dayIndex) {
+    entry.rows.forEach(function (row, slotIndex) {
+      out.push({
+        day: entry.day,
+        row: row,
+        when: unlocksAt(dayIndex, slotIndex)
+      });
+    });
+  });
+  return out;
+}
+
+function slotLabel(slot) {
+  return slot.row[1] === null
+    ? "Lecture " + slot.row[0]
+    : "Lecture " + slot.row[0] + " and Lab " + slot.row[1];
+}
+
 function formatWhen(date) {
   return date.toLocaleString(undefined, {
     weekday: "short", day: "numeric", month: "short",
     hour: "numeric", minute: "2-digit"
   });
+}
+
+function formatDate(date) {
+  return date.toLocaleDateString(undefined, {
+    weekday: "short", day: "numeric", month: "short"
+  });
+}
+
+function formatTime(date) {
+  return date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
 }
 
 /* ------------------------------------------------------------ rendering --- */
@@ -239,14 +326,33 @@ function downloadName(res) {
 const LOCK_ICON =
   '<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
 
+const EXTERNAL_ICON =
+  '<svg class="res__ext" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/>' +
+  '<path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+
 function resourceLink(res) {
+  const note = res.note ? " <small>· " + esc(res.note) + "</small>" : "";
+  const colab = colabUrl(res);
+
+  // Notebooks we can hand to Colab open there in a new tab.
+  if (colab) {
+    return (
+      '<a class="res__link res__link--colab" href="' + esc(colab) + '"' +
+      ' target="_blank" rel="noopener" title="Open in Google Colab">' +
+      ICONS.notebook +
+      "<span>" + esc(res.label) + "</span>" + note +
+      EXTERNAL_ICON +
+      "</a>"
+    );
+  }
+
+  // Everything else downloads from this site.
   return (
     '<a class="res__link" href="' + esc(encodeURI(res.path)) + '"' +
     ' download="' + esc(downloadName(res)) + '"' +
     ' title="' + esc(res.path) + '">' +
     ICONS[res.kind] +
-    "<span>" + esc(res.label) + "</span>" +
-    (res.note ? " <small>· " + esc(res.note) + "</small>" : "") +
+    "<span>" + esc(res.label) + "</span>" + note +
     "</a>"
   );
 }
@@ -308,18 +414,21 @@ function renderSchedule() {
   if (!body) return;
 
   body.innerHTML = SCHEDULE.map(function (entry, dayIndex) {
-    const when = unlocksAt(dayIndex);
-    const locked = !isUnlocked(when);
+    const dayStart = unlocksAt(dayIndex, 0);
 
     return entry.rows
-      .map(function (row, i) {
+      .map(function (row, slotIndex) {
+        const when = unlocksAt(dayIndex, slotIndex);   // each pair opens on its own clock
+        const locked = !isUnlocked(when);
+
         const dayCell =
-          i === 0
+          slotIndex === 0
             ? '<td class="syllabus__day" rowspan="' + entry.rows.length + '">' +
                 '<span class="day-pill"><small>Day</small><b>' + entry.day + "</b></span>" +
-                (when ? '<span class="day-when">' + esc(formatWhen(when)) + "</span>" : "") +
+                (dayStart ? '<span class="day-when">' + esc(formatDate(dayStart)) + "</span>" : "") +
               "</td>"
             : "";
+
         return (
           '<tr class="' + (locked ? "is-locked" : "") + '">' +
             dayCell + lectureCell(row[0], when) + labCell(row[1], when) +
@@ -335,27 +444,31 @@ function renderBanner() {
   const el = document.getElementById("release-banner");
   if (!el) return;
 
-  if (!RELEASE.start || !unlocksAt(0)) {
+  if (!RELEASE.start || !unlocksAt(0, 0)) {
     el.hidden = true;
     return;
   }
 
-  const next = SCHEDULE.map(function (_, i) { return { i: i, when: unlocksAt(i) }; })
-                       .find(function (d) { return !isUnlocked(d.when); });
+  const slots = allSlots();
+  const next = slots.find(function (slot) { return !isUnlocked(slot.when); });
+  const times = RELEASE.slotTimes || [];
 
   let msg;
   if (PREVIEW) {
-    msg = '<b>Preview mode.</b> You are seeing every day, including material students ' +
-          "cannot download yet. Share the plain link without <code>?preview</code>.";
+    msg = '<b>Preview mode.</b> You are seeing every session, including material students ' +
+          "cannot open yet. Share the plain link without <code>?preview</code>.";
   } else if (!next) {
     msg = "<b>All material released.</b> Every lecture and lab from this cohort is open — " +
           "keep the notebooks and work through them at your own pace.";
-  } else if (next.i === 0) {
-    msg = "<b>Materials open on day 1</b>, " + esc(formatWhen(next.when)) +
-          ". The full schedule is below so you know what's coming.";
   } else {
-    msg = "<b>Day " + SCHEDULE[next.i].day + " unlocks " + esc(formatWhen(next.when)) +
-          ".</b> Earlier days stay open for the rest of the course — nothing expires.";
+    const verb = next.row[1] === null ? "unlocks" : "unlock";
+    msg = "<b>" + esc(slotLabel(next)) + " " + verb + " " + esc(formatWhen(next.when)) + ".</b> ";
+    msg += next === slots[0]
+      ? "Each day opens its first lecture and lab at " + esc(formatTime(unlocksAt(0, 0))) +
+        (times.length > 1
+          ? " and the second at " + esc(formatTime(unlocksAt(0, 1))) + "."
+          : ".")
+      : "Anything already released stays open for the rest of the course — nothing expires.";
   }
 
   el.innerHTML = msg;
