@@ -18,47 +18,38 @@
 const LECTURES = {
   1: {
     title: "What Is AI?",
-    desc: "The opening lecture: what artificial intelligence and machine learning actually are, how they differ, and where they are already deployed — from molecular breeding and crop forecasting to the tools everyone uses daily.",
     slides: "lectures/AIBridge Lecture 1.pptx"
   },
   2: {
     title: "Python I — Input, Output, and Lists",
-    desc: "Your first Python: reading from the console and from files, writing results back out, and manipulating the list — the workhorse data structure behind everything that follows.",
     slides: "lectures/AIBridge Lecture 2.pptx"
   },
   3: {
     title: "Python II — Functions and Libraries",
-    desc: "What a function really is, the built-ins worth memorising, how importing works, and how to define functions of your own — the step that turns scripts into reusable tools.",
     slides: "lectures/AIBridge Lecture 3.pptx"
   },
   4: {
     title: "Models as Functions — Supervised Learning",
-    desc: "The central idea of the course: an AI model is a function that maps inputs to outputs. We build up from that to features, labels, and fitting your first supervised model to data.",
     slides: "lectures/AIBridge Lecture 4.pptx"
   },
   5: {
     title: "Beyond Accuracy — Evaluating Models",
-    desc: "Why a model with 99.99% accuracy can still be useless. Class imbalance, the confusion matrix, precision and recall, and how to pick a metric that matches the decision you're making.",
     slides: "lectures/AIBridge Lecture 5.pptx"
   },
   6: {
     title: "Classification — Decision Trees and Friends",
-    desc: "Predicting categories instead of numbers. Decision trees from first principles, then the family that grows out of them: random forests, support vector machines, Naïve Bayes, and k-nearest neighbours.",
     slides: "lectures/AIBridge Lecture 6.pptx"
   },
   7: {
     title: "Overfitting and Generalization",
-    desc: "The difference between fitting data and learning from it. Training versus testing, what a too-precise fit costs you on unseen data, and the feature-selection habits that keep models honest.",
     slides: "lectures/AIBridge Lecture 7.pptx"
   },
   8: {
     title: "Unsupervised Learning",
-    desc: "What you can learn from data with no labels at all: grouping samples with clustering, and squeezing many features into a few with dimensionality reduction.",
     slides: "lectures/AIBridge Lecture 8.pptx"
   },
   9: {
     title: "LLMs and Generative AI",
-    desc: "The lecture everyone comes for. What ChatGPT and its relatives are, how they got here, what they can and can't do, and how to reason about them without hype in either direction.",
     slides: "lectures/AIBridge Lecture 9.pptx"
   }
 };
@@ -66,7 +57,6 @@ const LECTURES = {
 const LABS = {
   1: {
     title: "Data Exploration",
-    desc: "Load the iris and wine-quality datasets in Colab, then work out what you're actually holding: mean, median, min, and max of a feature, filtering rows by condition, and scaling values into the 0–1 range.",
     resources: [
       { kind: "notebook", label: "Template for demo", path: "labs/LAB 1/AIBridge Lab 1 Template.ipynb" },
       { kind: "doc",      label: "Demo script",       path: "labs/LAB 1/Lab 1 Demo Script.docx" },
@@ -78,7 +68,6 @@ const LABS = {
   },
   2: {
     title: "Python for ML",
-    desc: "Pull the red wine dataset straight from the UCI repository, compute the standard deviation of every feature, rescale a column by its maximum, and plot two features against each other — colouring points by how far they sit from the mean.",
     resources: [
       { kind: "notebook", label: "Demo notebook",  path: "labs/LAB 2/✅DEMO 2 - Python for ML.ipynb" },
       { kind: "doc",      label: "Demo script",    path: "labs/LAB 2/✅DEMO 2 - Python for ML.docx" },
@@ -92,7 +81,6 @@ const LABS = {
   },
   3: {
     title: "Intro to Supervised Learning",
-    desc: "Two prediction problems on the same wine data: classify a sample as red or white from its chemistry, then predict its quality score — holding out the last 200 shuffled rows to test. Bonus round: polynomial regression and hunting for feature combinations that help.",
     resources: [
       { kind: "notebook", label: "Demo notebook", path: "labs/LAB 3/Lab 3 Demo🤖.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 3/✅DEMO 3 - Intro to Supervised.docx" },
@@ -104,7 +92,6 @@ const LABS = {
   },
   4: {
     title: "Classification Models",
-    desc: "Fit and plot a decision tree on the wine dataset, then put random forest, SVM, and Naïve Bayes side by side on red-vs-white classification and compare their accuracy on a held-out test set. Bonus: KNN, and what happens when one class is starved of samples.",
     resources: [
       { kind: "doc",      label: "Demo script",  path: "labs/LAB 4/Lab 4 Demo Script.docx" },
       { kind: "doc",      label: "Task",         path: "labs/LAB 4/Lab 4 Assignment.docx" },
@@ -115,7 +102,6 @@ const LABS = {
   },
   5: {
     title: "Overfitting and Feature Selection",
-    desc: "Fit a logistic regression to a modified iris dataset — train on the first 100 samples, test on the last 50 — then run feature selection with SelectKBest or VarianceThreshold, refit on the trimmed features, and see what fewer inputs buy you.",
     resources: [
       { kind: "notebook", label: "Demo notebook", path: "labs/LAB 5/Lab 5 Demo 🦾.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 5/DEMO 5 -- Overfitting and Feature Selection.docx" },
@@ -127,7 +113,6 @@ const LABS = {
   },
   6: {
     title: "Diagnosing Bad Data",
-    desc: "A model can be sound and still be wrong, because the data underneath it is broken. Each dataset in this lab has something deliberately wrong with it — find the fault, decide whether it can be fixed, and fix the ones that can.",
     resources: [
       { kind: "notebook", label: "Demo notebook", path: "labs/LAB 6/Lab 6 Demo.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 6/Lab 6 Demo Script.docx" },
@@ -137,7 +122,6 @@ const LABS = {
   },
   7: {
     title: "Clustering and PCA",
-    desc: "Run k-means on the wine data and see how closely the clusters it invents match the real classes — then sweep k to find out how much that answer depends on your guess. Follow with PCA: drop dimensions, watch accuracy respond, and plot the whole dataset in 2D.",
     resources: [
       { kind: "notebook", label: "Demo notebook", path: "labs/LAB 7/Lab 7 Demo.ipynb" },
       { kind: "doc",      label: "Demo script",   path: "labs/LAB 7/Lab 7 Demo Script.docx" },
@@ -149,7 +133,6 @@ const LABS = {
   },
   8: {
     title: "LLMs and Generative AI",
-    desc: "Learn to work with an LLM rather than at it. Pick a character, brainstorm an app idea with the model, implement a short program with its help, and generate test cases that show your code is actually correct — then pitch it in one line, thirty seconds, and two minutes.",
     resources: [
       { kind: "doc", label: "Demo script", path: "labs/LAB 8/✅DEMO 8 - LLMs and Generative AI.docx" },
       { kind: "doc", label: "Task",        path: "labs/LAB 8/TASK 8 - LLMs and Generative AI.docx" }
@@ -300,9 +283,6 @@ function formatDate(date) {
   });
 }
 
-function formatTime(date) {
-  return date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
-}
 
 /* ------------------------------------------------------------ rendering --- */
 
@@ -388,7 +368,6 @@ function lectureCell(id, when) {
     "<td>" +
       '<span class="cell__kind cell__kind--lecture">Lecture ' + id + "</span>" +
       '<h3 class="cell__title">' + esc(data.title) + "</h3>" +
-      '<p class="cell__desc">' + esc(data.desc) + "</p>" +
       resourceList([{ kind: "slides", label: "Slides", path: data.slides }], when) +
     "</td>"
   );
@@ -403,7 +382,6 @@ function labCell(id, when) {
     "<td>" +
       '<span class="cell__kind cell__kind--lab">Lab ' + id + "</span>" +
       '<h3 class="cell__title">' + esc(data.title) + "</h3>" +
-      '<p class="cell__desc">' + esc(data.desc) + "</p>" +
       resourceList(data.resources, when) +
     "</td>"
   );
@@ -451,24 +429,15 @@ function renderBanner() {
 
   const slots = allSlots();
   const next = slots.find(function (slot) { return !isUnlocked(slot.when); });
-  const times = RELEASE.slotTimes || [];
 
   let msg;
   if (PREVIEW) {
-    msg = '<b>Preview mode.</b> You are seeing every session, including material students ' +
-          "cannot open yet. Share the plain link without <code>?preview</code>.";
+    msg = "<b>Preview mode</b> — showing unreleased material.";
   } else if (!next) {
-    msg = "<b>All material released.</b> Every lecture and lab from this cohort is open — " +
-          "keep the notebooks and work through them at your own pace.";
+    msg = "<b>All material released.</b>";
   } else {
     const verb = next.row[1] === null ? "unlocks" : "unlock";
-    msg = "<b>" + esc(slotLabel(next)) + " " + verb + " " + esc(formatWhen(next.when)) + ".</b> ";
-    msg += next === slots[0]
-      ? "Each day opens its first lecture and lab at " + esc(formatTime(unlocksAt(0, 0))) +
-        (times.length > 1
-          ? " and the second at " + esc(formatTime(unlocksAt(0, 1))) + "."
-          : ".")
-      : "Anything already released stays open for the rest of the course — nothing expires.";
+    msg = "<b>" + esc(slotLabel(next)) + " " + verb + " " + esc(formatWhen(next.when)) + ".</b>";
   }
 
   el.innerHTML = msg;
