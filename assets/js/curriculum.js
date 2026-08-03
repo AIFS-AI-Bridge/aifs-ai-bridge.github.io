@@ -18,136 +18,390 @@
 const LECTURES = {
   1: {
     title: "What Is AI?",
-    slides: "lectures/AIBridge Lecture 1.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 1.pptx",
+        drive: "18adaARISvShcdaj3lNQRtaQwpErLexG1",
+      },
+    ],
   },
   2: {
     title: "Python I — Input, Output, and Lists",
-    slides: "lectures/AIBridge Lecture 2.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 2.pptx",
+        drive: "1w-QA7zaGjqCEZq_CTCnkLhWJpb5y81ON",
+      },
+    ],
   },
   3: {
     title: "Python II — Functions and Libraries",
-    slides: "lectures/AIBridge Lecture 3.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 3.pptx",
+        drive: "1cVeZxt_zZCAzIZDOHokOjXUVt8dhiaZT",
+      },
+    ],
   },
   4: {
     title: "Models as Functions — Supervised Learning",
-    slides: "lectures/AIBridge Lecture 4.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 4.pptx",
+        drive: "1Bdtz9x0bLsmXCK14wMtOM5yYNWDNybKn",
+      },
+    ],
   },
   5: {
     title: "Beyond Accuracy — Evaluating Models",
-    slides: "lectures/AIBridge Lecture 5.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 5.pptx",
+        drive: "1VeiP0TjTe23C7MBkYDmW3E-wRVBvagfG",
+      },
+    ],
   },
   6: {
     title: "Classification — Decision Trees and Friends",
-    slides: "lectures/AIBridge Lecture 6.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        note: "part 1",
+        path: "lectures/AIBridge Lecture 6-1.pptx",
+        drive: "1J-3zycxL4IFIvIWuy5eYqb_JEgV7JaXL",
+      },
+      {
+        kind: "slides",
+        label: "Slides",
+        note: "part 2",
+        path: "lectures/AIBridge Lecture 6-2.pptx",
+        drive: "1_qnrz-IdGZ5SewiFZ3GBDSuPctLL6UOC",
+      },
+    ],
   },
   7: {
     title: "Overfitting and Generalization",
-    slides: "lectures/AIBridge Lecture 7.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 7.pptx",
+        drive: "1BpunXm1qhrSfY5ZfVMe0l4zRdBN-l0M-",
+      },
+    ],
   },
   8: {
     title: "Unsupervised Learning",
-    slides: "lectures/AIBridge Lecture 8.pptx"
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 8.pptx",
+        drive: "1Ty0-JqYQ1DK0EDZF2czRwah3wj48zIJS",
+      },
+    ],
   },
   9: {
     title: "LLMs and Generative AI",
-    slides: "lectures/AIBridge Lecture 9.pptx"
-  }
+    slides: [
+      {
+        kind: "slides",
+        label: "Slides",
+        path: "lectures/AIBridge Lecture 9.pptx",
+        drive: "1IvsN-LwnJhQ6TlGjZ_t9u5ywPRvD_Bex",
+      },
+    ],
+  },
 };
 
 const LABS = {
   1: {
     title: "Data Exploration",
     resources: [
-      { kind: "notebook", label: "Template for demo", path: "labs/LAB 1/AIBridge Lab 1 Template.ipynb" },
-      { kind: "doc",      label: "Demo script",       path: "labs/LAB 1/Lab 1 Demo Script.docx" },
-      { kind: "doc",      label: "Task",              path: "labs/LAB 1/Lab 1 Assignment.docx" },
-      { kind: "notebook", label: "Level 1",           note: "guided",       path: "labs/LAB 1/Lab 1 Level 1.ipynb" },
-      { kind: "notebook", label: "Level 2",           note: "no scaffold",  path: "labs/LAB 1/Lab 1 Level 2.ipynb" },
-      { kind: "notebook", label: "Solution key",      path: "labs/LAB 1/Lab 1 Key.ipynb" }
-    ]
+      {
+        kind: "doc",
+        label: "Demo",
+        path: "labs/Lab 1/Lab 1 Demo Script.docx",
+        drive: "1nk_k1HOcBYkZgj4vDyyHGqXozxk3G6Jk",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/Lab 1/Lab 1 Assignment.docx",
+        drive: "13R21mkcbU-1pYXgoiGA0dwyujMs6qoDZ",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/Lab 1/Lab 1 Level 1.ipynb",
+        drive: "1xBg7iGTojLax_7UuF-nuoQKj_-QvrZGk",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/Lab 1/Lab 1 Level 2.ipynb",
+        drive: "1CYiwSX_4RdltC7WUkLf2UBhxO_DPZbDX",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/Lab 1/Lab 1 Key.ipynb",
+        drive: "1q6EPFhHfO9CXf0sx8HoU6WaNRgu0KerM",
+      },
+    ],
   },
   2: {
     title: "Python for ML",
     resources: [
-      { kind: "notebook", label: "Demo notebook",  path: "labs/LAB 2/✅DEMO 2 - Python for ML.ipynb" },
-      { kind: "doc",      label: "Demo script",    path: "labs/LAB 2/✅DEMO 2 - Python for ML.docx" },
-      { kind: "notebook", label: "Lecture demo",   path: "labs/LAB 2/Lecture 2 Demo🐰.ipynb" },
-      { kind: "notebook", label: "Lab demo",       path: "labs/LAB 2/Lab 2 Demo🐰.ipynb" },
-      { kind: "doc",      label: "Task",           path: "labs/LAB 2/TASK 2 - Python for ML.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 2/LAB 2S - Python for ML.ipynb" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 2/LAB 2B - Python for ML.ipynb" },
-      { kind: "notebook", label: "Solution key",   path: "labs/LAB 2/KEY 2 - Python for ML.ipynb" }
-    ]
+      {
+        kind: "notebook",
+        label: "Demo",
+        path: "labs/Lab 2/Lab 2 Demo Script.ipynb",
+        drive: "1hR0UNoJjUr9lDhGCGjCDvtApXfMBVy-r",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/Lab 2/Lab 2 Task.docx",
+        drive: "1S4w0WqPp1yp2RdqSNL1fjRlGx_rCWG3U",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/Lab 2/Lab 2 Level 1.ipynb",
+        drive: "1XZG6RUM7sSZ_h22lACPtYqcsBX9QjVT4",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/Lab 2/Lab 2 Level 2.ipynb",
+        drive: "1Yt6Ch_IaB2xI5Em5XUMBuvQvCgYW2jqv",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/Lab 2/Lab 2 Key.ipynb",
+        drive: "12s1-i1R6aELyf4DRHsVvITpq5FOxUWhX",
+      },
+    ],
   },
   3: {
     title: "Intro to Supervised Learning",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 3/Lab 3 Demo🤖.ipynb" },
-      { kind: "doc",      label: "Demo script",   path: "labs/LAB 3/✅DEMO 3 - Intro to Supervised.docx" },
-      { kind: "doc",      label: "Task",          path: "labs/LAB 3/Lab 3 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 3/Lab 3 Level 1.ipynb" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 3/Lab 3 Level 2.ipynb" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 3/Lab 3 Key.ipynb" }
-    ]
+      {
+        kind: "notebook",
+        label: "Demo",
+        path: "labs/LAB 3/Lab 3 Demo🤖.ipynb",
+        drive: "18NJDqPCvxPwwL71AIuU3-LEn8y_r8571",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 3/Lab 3 Assignment.docx",
+        drive: "1uPmMWYYwJQ-WlDHv7aPCa5WNpD_hoKvW",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/LAB 3/Lab 3 Level 1.ipynb",
+        drive: "1rqqId5oPx215BWR1ehe_u4HAnMtDQQwO",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/LAB 3/Lab 3 Level 2.ipynb",
+        drive: "15y0Ihz9LIHZw3JEIgjZut-HJB4UvI0LA",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/LAB 3/Lab 3 Key.ipynb",
+        drive: "1VKTZNTbnazHGRTVurELt6VBfy9wcFUes",
+      },
+    ],
   },
   4: {
     title: "Classification Models",
     resources: [
-      { kind: "doc",      label: "Demo script",  path: "labs/LAB 4/Lab 4 Demo Script.docx" },
-      { kind: "doc",      label: "Task",         path: "labs/LAB 4/Lab 4 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 4/Lab 4 Level 1.ipynb" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 4/Lab 4 Level 2.ipynb" },
-      { kind: "notebook", label: "Solution key", path: "labs/LAB 4/Lab 4 Key.ipynb" }
-    ]
+      {
+        kind: "doc",
+        label: "Demo",
+        path: "labs/LAB 4/Lab 4 Demo Script.docx",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 4/Lab 4 Assignment.docx",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/LAB 4/Lab 4 Level 1.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/LAB 4/Lab 4 Level 2.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/LAB 4/Lab 4 Key.ipynb",
+      },
+    ],
   },
   5: {
     title: "Overfitting and Feature Selection",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 5/Lab 5 Demo 🦾.ipynb" },
-      { kind: "doc",      label: "Demo script",   path: "labs/LAB 5/DEMO 5 -- Overfitting and Feature Selection.docx" },
-      { kind: "doc",      label: "Task",          path: "labs/LAB 5/TASK 5 -- Overfitting and Feature Selection.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 5/LAB 5S -- Overfitting and Feature Selection.ipynb" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 5/LAB 5B -- Overfitting and Feature Selection.ipynb" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 5/KEY 5 -- Overfitting and Feature Selection.ipynb" }
-    ]
+      {
+        kind: "notebook",
+        label: "Demo",
+        path: "labs/LAB 5/Lab 5 Demo 🦾.ipynb",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 5/TASK 5 -- Overfitting and Feature Selection.docx",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/LAB 5/LAB 5S -- Overfitting and Feature Selection.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/LAB 5/LAB 5B -- Overfitting and Feature Selection.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/LAB 5/KEY 5 -- Overfitting and Feature Selection.ipynb",
+      },
+    ],
   },
   6: {
     title: "Diagnosing Bad Data",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 6/Lab 6 Demo.ipynb" },
-      { kind: "doc",      label: "Demo script",   path: "labs/LAB 6/Lab 6 Demo Script.docx" },
-      { kind: "doc",      label: "Task",          path: "labs/LAB 6/Lab 6 Assignment.docx" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 6/Lab 6 Key.ipynb" }
-    ]
+      {
+        kind: "notebook",
+        label: "Demo",
+        path: "labs/LAB 6/Lab 6 Demo.ipynb",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 6/Lab 6 Assignment.docx",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/LAB 6/Lab 6 Key.ipynb",
+      },
+    ],
   },
   7: {
     title: "Clustering and PCA",
     resources: [
-      { kind: "notebook", label: "Demo notebook", path: "labs/LAB 7/Lab 7 Demo.ipynb" },
-      { kind: "doc",      label: "Demo script",   path: "labs/LAB 7/Lab 7 Demo Script.docx" },
-      { kind: "doc",      label: "Task",          path: "labs/LAB 7/Lab 7 Assignment.docx" },
-      { kind: "notebook", label: "Level 1", note: "guided",      path: "labs/LAB 7/Lab 7 level 1.ipynb" },
-      { kind: "notebook", label: "Level 2", note: "no scaffold", path: "labs/LAB 7/Lab 7 Level 2.ipynb" },
-      { kind: "notebook", label: "Solution key",  path: "labs/LAB 7/Lab 7 Key.ipynb" }
-    ]
+      {
+        kind: "notebook",
+        label: "Demo",
+        path: "labs/LAB 7/Lab 7 Demo.ipynb",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 7/Lab 7 Assignment.docx",
+      },
+      {
+        kind: "notebook",
+        label: "Level 1",
+        note: "guided",
+        path: "labs/LAB 7/Lab 7 level 1.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Level 2",
+        note: "no scaffold",
+        path: "labs/LAB 7/Lab 7 Level 2.ipynb",
+      },
+      {
+        kind: "notebook",
+        label: "Solution key",
+        path: "labs/LAB 7/Lab 7 Key.ipynb",
+      },
+    ],
   },
   8: {
     title: "LLMs and Generative AI",
     resources: [
-      { kind: "doc", label: "Demo script", path: "labs/LAB 8/✅DEMO 8 - LLMs and Generative AI.docx" },
-      { kind: "doc", label: "Task",        path: "labs/LAB 8/TASK 8 - LLMs and Generative AI.docx" }
-    ]
-  }
+      {
+        kind: "doc",
+        label: "Demo",
+        path: "labs/LAB 8/✅DEMO 8 - LLMs and Generative AI.docx",
+      },
+      {
+        kind: "doc",
+        label: "Task",
+        path: "labs/LAB 8/TASK 8 - LLMs and Generative AI.docx",
+      },
+    ],
+  },
 };
 
 /* Day-by-day schedule: two lectures and their paired labs per day.
    Nine lectures against eight labs, so day 5 closes on a lecture alone. */
 const SCHEDULE = [
-  { day: 1, rows: [[1, 1], [2, 2]] },
-  { day: 2, rows: [[3, 3], [4, 4]] },
-  { day: 3, rows: [[5, 5], [6, 6]] },
-  { day: 4, rows: [[7, 7], [8, 8]] },
-  { day: 5, rows: [[9, null]] }
+  {
+    day: 1,
+    rows: [
+      [1, 1],
+      [2, 2],
+    ],
+  },
+  {
+    day: 2,
+    rows: [
+      [3, 3],
+      [4, 4],
+    ],
+  },
+  {
+    day: 3,
+    rows: [
+      [5, 5],
+      [6, 6],
+    ],
+  },
+  {
+    day: 4,
+    rows: [
+      [7, 7],
+      [8, 8],
+    ],
+  },
+  { day: 5, rows: [[9, null]] },
 ];
 
 /* ------------------------------------------------------- release timing ---
@@ -172,7 +426,7 @@ const RELEASE = {
   start: "2026-08-03",
   offsets: [0, 1, 2, 3, 4],
   slotTimes: ["08:00", "12:00"],
-  keyDelayHours: 3
+  keyDelayHours: 3,
 };
 
 /* --------------------------------------------------------------- colab ---
@@ -192,7 +446,11 @@ const RELEASE = {
  *
  *      { kind: "notebook", label: "Level 1", path: "…", colab: "1AbC…xyz" }
  */
-const COLAB_GITHUB = { owner: "AIFS-AI-Bridge", repo: "aifs-ai-bridge.github.io", branch: "main" };
+const COLAB_GITHUB = {
+  owner: "AIFS-AI-Bridge",
+  repo: "aifs-ai-bridge.github.io",
+  branch: "main",
+};
 
 /* The Colab URL for a notebook, or null when we don't know where it lives. */
 function colabUrl(res) {
@@ -206,9 +464,16 @@ function colabUrl(res) {
   }
 
   if (COLAB_GITHUB && COLAB_GITHUB.owner && COLAB_GITHUB.repo) {
-    return "https://colab.research.google.com/github/" +
-           COLAB_GITHUB.owner + "/" + COLAB_GITHUB.repo + "/blob/" +
-           (COLAB_GITHUB.branch || "main") + "/" + encodeURI(res.path);
+    return (
+      "https://colab.research.google.com/github/" +
+      COLAB_GITHUB.owner +
+      "/" +
+      COLAB_GITHUB.repo +
+      "/blob/" +
+      (COLAB_GITHUB.branch || "main") +
+      "/" +
+      encodeURI(res.path)
+    );
   }
 
   return null;
@@ -221,17 +486,19 @@ const PREVIEW = /[?&]preview\b/.test(location.search);
 function unlocksAt(dayIndex, slotIndex) {
   if (!RELEASE.start) return null;
 
-  const times = RELEASE.slotTimes && RELEASE.slotTimes.length
-    ? RELEASE.slotTimes
-    : ["00:00"];
+  const times =
+    RELEASE.slotTimes && RELEASE.slotTimes.length
+      ? RELEASE.slotTimes
+      : ["00:00"];
   const time = times[Math.min(slotIndex, times.length - 1)];
 
   // Accept "2026-08-03" or "2026-08-03T08:00" for start; the date is what counts.
   const at = new Date(String(RELEASE.start).slice(0, 10) + "T" + time);
   if (isNaN(at)) return null;
 
-  const offset = RELEASE.offsets[dayIndex] != null ? RELEASE.offsets[dayIndex] : dayIndex;
-  at.setDate(at.getDate() + offset);   // keeps wall-clock time across DST
+  const offset =
+    RELEASE.offsets[dayIndex] != null ? RELEASE.offsets[dayIndex] : dayIndex;
+  at.setDate(at.getDate() + offset); // keeps wall-clock time across DST
   return at;
 }
 
@@ -257,7 +524,7 @@ function allSlots() {
       out.push({
         day: entry.day,
         row: row,
-        when: unlocksAt(dayIndex, slotIndex)
+        when: unlocksAt(dayIndex, slotIndex),
       });
     });
   });
@@ -272,28 +539,37 @@ function slotLabel(slot) {
 
 function formatWhen(date) {
   return date.toLocaleString(undefined, {
-    weekday: "short", day: "numeric", month: "short",
-    hour: "numeric", minute: "2-digit"
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "2-digit",
   });
 }
 
 function formatDate(date) {
   return date.toLocaleDateString(undefined, {
-    weekday: "short", day: "numeric", month: "short"
+    weekday: "short",
+    day: "numeric",
+    month: "short",
   });
 }
-
 
 /* ------------------------------------------------------------ rendering --- */
 
 const ICONS = {
-  slides:   '<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
-  notebook: '<svg viewBox="0 0 24 24"><path d="M4 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 2v20M12 8h5M12 12h5"/></svg>',
-  doc:      '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>'
+  slides:
+    '<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+  notebook:
+    '<svg viewBox="0 0 24 24"><path d="M4 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 2v20M12 8h5M12 12h5"/></svg>',
+  doc: '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>',
 };
 
 const esc = (s) =>
-  String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  String(s).replace(
+    /[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+  );
 
 /* Notebooks are stored without a file extension; hand the browser a sensible
    download name so they land as .ipynb and open straight in Colab/Jupyter. */
@@ -310,43 +586,82 @@ const EXTERNAL_ICON =
   '<svg class="res__ext" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/>' +
   '<path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
+/* Where a resource opens. A Drive id wins: notebooks go to Colab, everything
+   else to the Drive viewer. Without one we fall back to the repo copy. */
+function resourceUrl(res) {
+  if (res.drive) {
+    return res.kind === "notebook"
+      ? {
+          href: "https://colab.research.google.com/drive/" + res.drive,
+          away: true,
+        }
+      : {
+          href: "https://drive.google.com/file/d/" + res.drive + "/view",
+          away: true,
+        };
+  }
+  const gh = colabUrl(res);
+  if (gh) return { href: gh, away: true };
+  return {
+    href: encodeURI(res.path),
+    away: false,
+    download: downloadName(res),
+  };
+}
+
 function resourceLink(res) {
   const note = res.note ? " <small>· " + esc(res.note) + "</small>" : "";
-  const colab = colabUrl(res);
+  const target = resourceUrl(res);
 
-  // Notebooks we can hand to Colab open there in a new tab.
-  if (colab) {
+  if (target.away) {
     return (
-      '<a class="res__link res__link--colab" href="' + esc(colab) + '"' +
-      ' target="_blank" rel="noopener" title="Open in Google Colab">' +
-      ICONS.notebook +
-      "<span>" + esc(res.label) + "</span>" + note +
+      '<a class="res__link res__link--colab" href="' +
+      esc(target.href) +
+      '"' +
+      ' target="_blank" rel="noopener">' +
+      ICONS[res.kind] +
+      "<span>" +
+      esc(res.label) +
+      "</span>" +
+      note +
       EXTERNAL_ICON +
       "</a>"
     );
   }
 
-  // Everything else downloads from this site.
   return (
-    '<a class="res__link" href="' + esc(encodeURI(res.path)) + '"' +
-    ' download="' + esc(downloadName(res)) + '"' +
-    ' title="' + esc(res.path) + '">' +
+    '<a class="res__link" href="' +
+    esc(target.href) +
+    '"' +
+    ' download="' +
+    esc(target.download) +
+    '"' +
+    ' title="' +
+    esc(res.path) +
+    '">' +
     ICONS[res.kind] +
-    "<span>" + esc(res.label) + "</span>" + note +
+    "<span>" +
+    esc(res.label) +
+    "</span>" +
+    note +
     "</a>"
   );
 }
 
 function lockedChip(when) {
   return (
-    '<span class="res__link res__link--locked">' + LOCK_ICON +
-    "<span>Unlocks " + esc(formatWhen(when)) + "</span></span>"
+    '<span class="res__link res__link--locked">' +
+    LOCK_ICON +
+    "<span>Unlocks " +
+    esc(formatWhen(when)) +
+    "</span></span>"
   );
 }
 
 /* Renders a resource list, holding back anything not yet released. */
 function resourceList(resources, when) {
-  if (!isUnlocked(when)) return '<div class="res">' + lockedChip(when) + "</div>";
+  if (!isUnlocked(when))
+    return '<div class="res">' + lockedChip(when) + "</div>";
 
   const keyWhen = keyUnlocksAt(when);
   const open = [];
@@ -366,9 +681,13 @@ function lectureCell(id, when) {
   if (!data) return '<td><span class="cell__none">—</span></td>';
   return (
     "<td>" +
-      '<span class="cell__kind cell__kind--lecture">Lecture ' + id + "</span>" +
-      '<h3 class="cell__title">' + esc(data.title) + "</h3>" +
-      resourceList([{ kind: "slides", label: "Slides", path: data.slides }], when) +
+    '<span class="cell__kind cell__kind--lecture">Lecture ' +
+    id +
+    "</span>" +
+    '<h3 class="cell__title">' +
+    esc(data.title) +
+    "</h3>" +
+    resourceList(data.slides, when) +
     "</td>"
   );
 }
@@ -380,9 +699,13 @@ function labCell(id, when) {
   }
   return (
     "<td>" +
-      '<span class="cell__kind cell__kind--lab">Lab ' + id + "</span>" +
-      '<h3 class="cell__title">' + esc(data.title) + "</h3>" +
-      resourceList(data.resources, when) +
+    '<span class="cell__kind cell__kind--lab">Lab ' +
+    id +
+    "</span>" +
+    '<h3 class="cell__title">' +
+    esc(data.title) +
+    "</h3>" +
+    resourceList(data.resources, when) +
     "</td>"
   );
 }
@@ -396,20 +719,32 @@ function renderSchedule() {
 
     return entry.rows
       .map(function (row, slotIndex) {
-        const when = unlocksAt(dayIndex, slotIndex);   // each pair opens on its own clock
+        const when = unlocksAt(dayIndex, slotIndex); // each pair opens on its own clock
         const locked = !isUnlocked(when);
 
         const dayCell =
           slotIndex === 0
-            ? '<td class="syllabus__day" rowspan="' + entry.rows.length + '">' +
-                '<span class="day-pill"><small>Day</small><b>' + entry.day + "</b></span>" +
-                (dayStart ? '<span class="day-when">' + esc(formatDate(dayStart)) + "</span>" : "") +
+            ? '<td class="syllabus__day" rowspan="' +
+              entry.rows.length +
+              '">' +
+              '<span class="day-pill"><small>Day</small><b>' +
+              entry.day +
+              "</b></span>" +
+              (dayStart
+                ? '<span class="day-when">' +
+                  esc(formatDate(dayStart)) +
+                  "</span>"
+                : "") +
               "</td>"
             : "";
 
         return (
-          '<tr class="' + (locked ? "is-locked" : "") + '">' +
-            dayCell + lectureCell(row[0], when) + labCell(row[1], when) +
+          '<tr class="' +
+          (locked ? "is-locked" : "") +
+          '">' +
+          dayCell +
+          lectureCell(row[0], when) +
+          labCell(row[1], when) +
           "</tr>"
         );
       })
@@ -428,7 +763,9 @@ function renderBanner() {
   }
 
   const slots = allSlots();
-  const next = slots.find(function (slot) { return !isUnlocked(slot.when); });
+  const next = slots.find(function (slot) {
+    return !isUnlocked(slot.when);
+  });
 
   let msg;
   if (PREVIEW) {
@@ -437,7 +774,14 @@ function renderBanner() {
     msg = "<b>All material released.</b>";
   } else {
     const verb = next.row[1] === null ? "unlocks" : "unlock";
-    msg = "<b>" + esc(slotLabel(next)) + " " + verb + " " + esc(formatWhen(next.when)) + ".</b>";
+    msg =
+      "<b>" +
+      esc(slotLabel(next)) +
+      " " +
+      verb +
+      " " +
+      esc(formatWhen(next.when)) +
+      ".</b>";
   }
 
   el.innerHTML = msg;

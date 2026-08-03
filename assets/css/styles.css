@@ -304,7 +304,7 @@ p:last-child { margin-bottom: 0; }
 .grid--3 { grid-template-columns: repeat(auto-fit, minmax(272px, 1fr)); }
 /* People sit on a single row at desktop widths — small portraits, tight gaps. */
 .grid--people {
-  grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
   gap: clamp(12px, 1.6vw, 20px);
 }
 
@@ -410,22 +410,11 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.82);
 }
+.person--tba .person__photo { border-style: dashed; opacity: 0.7; }
+.person--tba .person__monogram { opacity: 0.6; }
+
 .person__name { font-size: 0.93rem; font-weight: 600; line-height: 1.35; }
 .person__role { color: var(--muted); font-size: 0.79rem; margin-top: 3px; line-height: 1.4; }
-.person--past .person__photo { filter: saturate(0.55); opacity: 0.85; }
-
-.rule {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin: clamp(56px, 8vw, 90px) 0 clamp(24px, 3vw, 34px);
-  color: var(--muted);
-  font-size: 0.82rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.rule:first-child { margin-top: 0; }
-.rule::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
 /* -------------------------------------------------------------- events --- */
 

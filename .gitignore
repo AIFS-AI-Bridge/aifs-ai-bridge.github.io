@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Word/Office lock files left behind by open documents
+~$*
+
+# Editor scratch
+*.swp
