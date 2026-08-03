@@ -367,14 +367,9 @@ const LABS = {
     title: "LLMs and Generative AI",
     resources: [
       {
-        kind: "doc",
-        label: "Demo",
-        path: "labs/LAB 8/✅DEMO 8 - LLMs and Generative AI.docx",
-      },
-      {
-        kind: "doc",
-        label: "Task",
-        path: "labs/LAB 8/TASK 8 - LLMs and Generative AI.docx",
+        kind: "slides",
+        label: "Slides",
+        drive: "1kNVWQMzFe9NDQ-RFDRZyuNBkxgSCVabq",
       },
     ],
   },
