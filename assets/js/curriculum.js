@@ -237,7 +237,7 @@ const LABS = {
     ],
   },
   4: {
-    title: "Classification Models",
+    title: "Evaluation and Data Quality",
     resources: [
       {
         kind: "notebook",
@@ -269,7 +269,7 @@ const LABS = {
     ],
   },
   5: {
-    title: "Overfitting and Feature Selection",
+    title: "Introduction to Explainability",
     resources: [
       {
         kind: "notebook",
@@ -306,7 +306,7 @@ const LABS = {
     ],
   },
   6: {
-    title: "Diagnosing Bad Data",
+    title: "Overfitting",
     resources: [
       {
         kind: "notebook",
@@ -329,7 +329,7 @@ const LABS = {
     ],
   },
   7: {
-    title: "Transfer Learning",
+    title: "Deep Learning and Transfer Learning",
     resources: [
       {
         kind: "notebook",
