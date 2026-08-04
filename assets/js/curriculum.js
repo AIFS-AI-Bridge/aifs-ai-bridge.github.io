@@ -207,6 +207,7 @@ const LABS = {
         kind: "notebook",
         label: "Demo",
         path: "labs/LAB 3/Lab 3 Demo🤖.ipynb",
+        drive: "13R_u-FW79gZNWtXUwFZrGJ0_IDaGcxbE",
       },
       {
         kind: "doc",
