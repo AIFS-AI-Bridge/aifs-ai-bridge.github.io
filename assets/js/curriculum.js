@@ -17,7 +17,7 @@
 
 const LECTURES = {
   1: {
-    title: "What Is AI?",
+    title: "AI/ML Mental Model + Python Basics",
     slides: [
       {
         kind: "slides",
@@ -28,7 +28,7 @@ const LECTURES = {
     ],
   },
   2: {
-    title: "Python I — Input, Output, and Lists",
+    title: "Python for Data + AI-Assisted Coding",
     slides: [
       {
         kind: "slides",
@@ -39,7 +39,7 @@ const LECTURES = {
     ],
   },
   3: {
-    title: "Python II — Functions and Libraries",
+    title: "Supervised Learning I: Models",
     slides: [
       {
         kind: "slides",
@@ -50,7 +50,7 @@ const LECTURES = {
     ],
   },
   4: {
-    title: "Models as Functions — Supervised Learning",
+    title: "Evaluation and Data Quality",
     slides: [
       {
         kind: "slides",
@@ -61,7 +61,7 @@ const LECTURES = {
     ],
   },
   5: {
-    title: "Beyond Accuracy — Evaluating Models",
+    title: "More supervised learning models, Feature Importance",
     slides: [
       {
         kind: "slides",
@@ -72,7 +72,8 @@ const LECTURES = {
     ],
   },
   6: {
-    title: "Classification — Decision Trees and Friends",
+    title:
+      "Overfitting, Feature Selection, ML pipeline, and Unsupervised Learning",
     slides: [
       {
         kind: "slides",
@@ -91,7 +92,7 @@ const LECTURES = {
     ],
   },
   7: {
-    title: "Overfitting and Generalization",
+    title: "Deep Learning Basics: Pretraining and Fine-Tuning",
     slides: [
       {
         kind: "slides",
@@ -102,7 +103,7 @@ const LECTURES = {
     ],
   },
   8: {
-    title: "Unsupervised Learning",
+    title: "How LLMs Actually Work",
     slides: [
       {
         kind: "slides",
@@ -113,7 +114,7 @@ const LECTURES = {
     ],
   },
   9: {
-    title: "LLMs and Generative AI",
+    title: "LLMs as Research Collaborators",
     slides: [
       {
         kind: "slides",
