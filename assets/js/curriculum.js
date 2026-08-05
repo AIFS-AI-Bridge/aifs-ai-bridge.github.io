@@ -279,6 +279,11 @@ const LABS = {
         drive: "1IfNh8kZrXAIFG6MjtTgfSQkxDyRTMEH2",
       },
       {
+        kind: "notebook",
+        label: "Demo Template",
+        drive: "1d0RlKC9adpme5Og-br5c6TU2otngQ4XY",
+      },
+      {
         kind: "doc",
         label: "Task",
         drive: "1gB7jIYILItGq2sfFTtkwDns1qvbQb93C",
