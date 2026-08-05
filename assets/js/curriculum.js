@@ -308,7 +308,7 @@ const LABS = {
     ],
   },
   6: {
-    title: "Overfitting",
+    title: "Overfitting and Unsupervised Learning",
     resources: [
       {
         kind: "notebook",
