@@ -380,7 +380,7 @@ const LABS = {
       {
         kind: "slides",
         label: "Slides",
-        drive: "1kNVWQMzFe9NDQ-RFDRZyuNBkxgSCVabq",
+        drive: "11_gmekssdY-KKwmV7BFmVZ1McS45VI25",
       },
     ],
   },
@@ -429,9 +429,7 @@ const SCHEDULE = [
   },
   {
     day: 5,
-    rows: [
-      [9, 9],
-    ],
+    rows: [[9, 9]],
   },
 ];
 
