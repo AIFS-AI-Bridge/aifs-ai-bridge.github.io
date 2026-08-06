@@ -109,7 +109,7 @@ const LECTURES = {
         kind: "slides",
         label: "Slides",
         path: "lectures/AIBridge Lecture 8.pptx",
-        drive: "1Ty0-JqYQ1DK0EDZF2czRwah3wj48zIJS",
+        drive: "11_gmekssdY-KKwmV7BFmVZ1McS45VI25",
       },
     ],
   },
@@ -384,6 +384,16 @@ const LABS = {
       },
     ],
   },
+  9: {
+    title: "Research Walkthrough",
+    resources: [
+      {
+        kind: "slides",
+        label: "Slides",
+        drive: "10VoFrMAMUVYG0l8bb-vL-urTXhcMjfrY",
+      },
+    ],
+  },
 };
 
 /* Day-by-day schedule: two lectures and their paired labs per day.
@@ -417,7 +427,12 @@ const SCHEDULE = [
       [8, 8],
     ],
   },
-  { day: 5, rows: [[9, null]] },
+  {
+    day: 5,
+    rows: [
+      [9, 9],
+    ],
+  },
 ];
 
 /* ------------------------------------------------------- release timing ---
