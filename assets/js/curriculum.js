@@ -380,7 +380,7 @@ const LABS = {
       {
         kind: "slides",
         label: "Slides",
-        drive: "11_gmekssdY-KKwmV7BFmVZ1McS45VI25",
+        drive: "1kNVWQMzFe9NDQ-RFDRZyuNBkxgSCVabq",
       },
     ],
   },
