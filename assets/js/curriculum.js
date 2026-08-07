@@ -385,12 +385,17 @@ const LABS = {
     ],
   },
   9: {
-    title: "Research Walkthrough",
+    title: "Agents and Skills",
     resources: [
       {
         kind: "slides",
         label: "Slides",
         drive: "10VoFrMAMUVYG0l8bb-vL-urTXhcMjfrY",
+      },
+      {
+        kind: "doc",
+        label: "Skills",
+        drive: "1Wh4QKbCg3N47dWzlknGsShq-yINYAhjx",
       },
     ],
   },
